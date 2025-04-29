@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document Vault</title>
+  <link rel="stylesheet" href="../CSS/DocumentVault.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Document Vault</h2>
+
+    <label for="fileUpload">Upload Document:</label>
+    <input type="file" id="fileUpload" />
+
+    <label for="access">Access Permissions:</label>
+    <select id="access">
+      <option>HR</option>
+      <option>Manager</option>
+      <option>Employee</option>
+    </select>
+
+    <label for="email">Request Electronic Signature:</label>
+    <input type="email" id="email" placeholder="Enter email" />
+    <button onclick="sendSignature('Signature request sent!')">Send Signature Request</button>
+
+    <label for="retention">Retention Policy:</label>
+    <textarea id="retention" rows="3" placeholder="e.g., Retain for 3 years after upload date. Auto-delete after."></textarea>
+    <button onclick="saveRetention('Retention policy saved!')">Save Retention Policy</button>
+  </div>
+  <script src="DocumentVault.js"></script>
+</body>
+</html>
+
+
+  
