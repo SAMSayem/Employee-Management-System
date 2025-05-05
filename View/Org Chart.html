@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Org Chart</title>
+  <link rel="stylesheet" href="../CSS/Org Chart.css" />
+</head>
+<body>
+  <div id="controls">
+    <button onclick="printChart()">Print</button>
+  </div>
+  <div id="org-chart-container">
+    <div class="employee" onclick="showProfile('Tanvir')">
+      <img src="https://www.gettyimages.com/detail/photo/portrait-of-male-ceo-in-big-corner-office-looking-royalty-free-image/688022852?adppopup=true" alt="Tanvir" />
+      <p>Tanvir<br><small>CEO</small></p>
+    </div>
+    <div class="employee" onclick="showProfile('SAM')">
+      <img src="https://via.placeholder.com/80" alt="SAM" />
+      <p>SAM<br><small>CTO</small></p>
+    </div>
+    <!-- Add more employees similarly -->
+  </div>
+
+  <div id="profile-popup">
+    <div id="profile-content"></div>
+    <button onclick="closeProfile()">Close</button>
+  </div>
+
+  <script src="../JS/Org Chart.js"></script>
+</body>
+</html>
