@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Employee Management System</title>
+  <link rel="stylesheet" href="../CSS/Company Announcements.css">
+<head>
+<body>
+
+    
+      
+        <section id="announcements">
+            <h2>Company Announcements</h2>
+          
+            <!-- Post an Announcement -->
+            <form id="announcementForm">
+              <label>Department:
+                <select id="announcementDept" required>
+                  <option value="All">All</option>
+                  <option value="HR">HR</option>
+                  <option value="Engineering">Engineering</option>
+                  <option value="Sales">Sales</option>
+                  <option value="Marketing">Marketing</option>
+                </select>
+              </label>
+          
+              <label>Priority:
+                <select id="announcementPriority" required>
+                  <option value="normal">Normal</option>
+                  <option value="high">Priority Alert</option>
+                </select>
+              </label>
+          
+              <label>Message:
+                <textarea id="announcementMsg" rows="3" required></textarea>
+              </label>
+          
+              <button type="submit">Post Announcement</button>
+            </form>
+          
+            <!-- Priority Alerts Section -->
+            <h3>🚨 Priority Alerts</h3>
+            <ul id="priorityAlertsList" class="announcement-feed"></ul>
+          
+            <!-- News Feed Section -->
+            <h3>📰 News Feed</h3>
+            <ul id="newsFeedList" class="announcement-feed"></ul>
+          </section>
+          
+  <footer>
+    <p>&copy; 2025 Employee Management System</p>
+  </footer>
+
+  <script src="../JS/Comapany Announcements.js"></script>
+</body>
+</html>
