@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Department Editor</title>
+  <link rel="stylesheet" href="../CSS/DepartmentEditor.css">
+</head>
+<body>
+  <header>
+    <h1>Department Editor</h1>
+  </header>
+  <main>
+    <div class="dept-container" id="deptA" ondrop="drop(event, 'deptA')" ondragover="allowDrop(event)">
+      <h3>Division A</h3>
+    </div>
+    <div class="dept-container" id="deptB" ondrop="drop(event, 'deptB')" ondragover="allowDrop(event)">
+      <h3>Division B</h3>
+    </div>
+    <div class="dept-container" id="deptC" ondrop="drop(event, 'deptC')" ondragover="allowDrop(event)">
+      <h3>Division C</h3>
+    </div>
+
+    <div id="departments">
+      <div id="eng" class="department red" draggable="true" ondragstart="drag(event)">Engineering</div>
+      <div id="sales" class="department green" draggable="true" ondragstart="drag(event)">Sales</div>
+      <div id="hr" class="department blue" draggable="true" ondragstart="drag(event)">Human Resources</div>
+      <div id="design" class="department orange" draggable="true" ondragstart="drag(event)">Design</div>
+    </div>
+  </main>
+
+  <script src="../JS/DepartmentEditor.js"></script>
+</body>
+</html>

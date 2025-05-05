@@ -1,0 +1,42 @@
+/* style.css – Reporting Lines */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+  }
+  
+  header {
+    background-color: #4a90e2;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  main {
+    padding: 2rem;
+  }
+  
+  .department {
+    margin: 1rem 0;
+    padding: 1rem;
+    border-left: 5px solid;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  .department .title {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .department .reporting {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .color-red { border-color: #e74c3c; }
+  .color-blue { border-color: #23597e; }
+  .color-green { border-color: #2ecc71; }
+  .color-orange { border-color: #e67e22; }
+  

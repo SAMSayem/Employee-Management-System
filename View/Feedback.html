@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>360° Feedback</title>
+  <link rel="stylesheet" href="../CSS/Feedback.css">
+</head>
+<body>
+  <header>
+    <h1>360° Feedback</h1>
+  </header>
+
+  <main>
+    <form id="feedbackForm">
+      <label for="reviewee">Employee Being Reviewed:</label>
+      <input type="text" id="reviewee" required>
+
+      <label for="reviewer">Your Name:</label>
+      <input type="text" id="reviewer" required>
+
+      <label for="feedback">Feedback:</label>
+      <textarea id="feedback" rows="5" required></textarea>
+
+      <label for="relationship">Your Role:</label>
+      <select id="relationship" required>
+        <option value="">Select</option>
+        <option value="Manager">Manager</option>
+        <option value="Peer">Peer</option>
+        <option value="Staff">Staff</option>
+      </select>
+
+      <button type="submit">Submit Feedback</button>
+    </form>
+  </main>
+
+  <script src="../JS/Feedback.js"></script>
+</body>
+</html>

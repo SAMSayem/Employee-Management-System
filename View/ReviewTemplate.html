@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Review Template</title>
+  <link rel="stylesheet" href="../CSS/ReviewTemplate.css">
+</head>
+<body>
+  <header>
+    <h1>Performance Review Template</h1>
+  </header>
+
+  <main>
+    <form id="reviewForm">
+      <h2>Self-Assessment</h2>
+      <label for="employeeName">Employee Name:</label>
+      <input type="text" id="employeeName" required>
+
+      <label for="strengths">Strengths:</label>
+      <textarea id="strengths" rows="4" required></textarea>
+
+      <label for="improvements">Areas for Improvement:</label>
+      <textarea id="improvements" rows="4" required></textarea>
+
+      <h2>Manager Evaluation</h2>
+      <label for="managerName">Manager Name:</label>
+      <input type="text" id="managerName" required>
+
+      <label for="performanceRating">Performance Rating (1-5):</label>
+      <input type="number" id="performanceRating" min="1" max="5" required>
+
+      <label for="managerComments">Manager Comments:</label>
+      <textarea id="managerComments" rows="4" required></textarea>
+
+      <button type="submit">Save Review</button>
+    </form>
+  </main>
+
+  <script src="../JS/ReviewTemplate.js"></script>
+</body>
+</html>

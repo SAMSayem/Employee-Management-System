@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile Viewer</title>
+  <link rel="stylesheet" href="../CSS/ProfileViewer.css" />
+</head>
+<body>
+  <header>
+    <h1>Employee Profile Viewer</h1>
+    <nav>
+      <a href="EmployeeList.html">Employee List</a>
+      <a href="ProfileViewer.html">Profile Viewer</a>
+      <a href="AdvSearch.html">Advanced Search</a>
+    </nav>
+  </header>
+
+  <main>
+    <input type="text" id="viewID" placeholder="Enter Employee ID" />
+    <button onclick="viewProfile()">View Profile</button>
+    <div id="profileDisplay"></div>
+  </main>
+
+  <script src="../JS/ProfileViewer.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+/* leave-calendar.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+  }
+  
+  header {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  main {
+    padding: 2rem;
+  }
+  
+  form {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+  }
+  
+  form label {
+    display: block;
+    margin-top: 1rem;
+  }
+  
+  form input, form select, form button {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    margin-top: 1rem;
+    cursor: pointer;
+  }
+  
+  #calendar {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  #leaveList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #leaveList li {
+    padding: 0.5rem;
+    border-bottom: 1px solid #ccc;
+  }
+  
