@@ -1,0 +1,86 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Section Styling */
+  section {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Form Elements */
+  form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  
+  textarea {
+    width: 100%;
+    height: 100px;
+    padding: 8px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    font-size: 14px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 10px;
+  }
+  
+  ul li {
+    margin-bottom: 10px;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 10px 16px;
+    background-color: #007bff;
+    color: white;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Response Text */
+  #exitResponse {
+    margin-top: 15px;
+    font-weight: bold;
+    color: green;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #e0e0e0;
+    color: #555;
+    margin-top: 40px;
+  }
+  
