@@ -14,7 +14,7 @@
   <!-- Post an Announcement -->
   <form id="announcementForm">
     <label for="announcementDept">Department:</label>
-    <select id="announcementDept" required>
+    <select id="announcementDept" name="announcementDept" required>
       <option value="All">All</option>
       <option value="HR">HR</option>
       <option value="Engineering">Engineering</option>
@@ -23,13 +23,13 @@
     </select>
 
     <label for="announcementPriority">Priority:</label>
-    <select id="announcementPriority" required>
+    <select id="announcementPriority" name="announcementPriority" required>
       <option value="normal">Normal</option>
       <option value="high">Priority Alert</option>
     </select>
 
     <label for="announcementMsg">Message:</label>
-    <textarea id="announcementMsg" rows="3" required></textarea>
+    <textarea id="announcementMsg" name="announcementMsg" rows="3" required></textarea>
 
     <button type="submit">Post Announcement</button>
   </form>
@@ -47,6 +47,6 @@
   <p>&copy; 2025 Employee Management System</p>
 </footer>
 
-<script src="../JS/Comapany Announcements.js"></script>
+<script src="../JS/Company Announcements.js"></script>
 </body>
 </html>
