@@ -1,0 +1,150 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .authForm {
+    display: none;
+  }
+  
+  .authForm input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .authForm button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .authForm button:hover {
+    background-color: #45a049;
+  }
+  
+  .authForm label {
+    font-size: 14px;
+    margin-top: 10px;
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+  }
+  
+  .authForm .links {
+    margin-top: 20px;
+  }
+  
+  .authForm .links a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .authForm .links a:hover {
+    text-decoration: underline;
+  }
+  
+  .authForm input:focus,
+  .authForm button:focus {
+    outline: none;
+    border: 1px solid #4CAF50;
+  }
+  
+  .authForm input::placeholder {
+    color: #aaa;
+  }
+  
+  #authHeader {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .authForm .links a {
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
+  .authForm p {
+    margin-top: 20px;
+  }
+  
+  #emailVerificationForm p {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  #emailVerificationForm a {
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  #emailVerificationForm a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Adjustments for responsiveness */
+  @media screen and (max-width: 480px) {
+    .container {
+      padding: 20px;
+    }
+  
+    h1 {
+      font-size: 24px;
+    }
+  
+    h2 {
+      font-size: 22px;
+    }
+  
+    .authForm button {
+      font-size: 14px;
+    }
+  }
+  
