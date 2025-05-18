@@ -1,19 +1,23 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $department = htmlspecialchars($_POST["announcementDept"]);
-    $priority = htmlspecialchars($_POST["announcementPriority"]);
-    $message = htmlspecialchars($_POST["announcementMsg"]);
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $department = $_POST['announcementDept'];
+    $priority = $_POST['announcementPriority'];
+    $message = $_POST['announcementMsg'];
+    $timestamp = date('Y-m-d H:i:s');
 
-    $logFile = "announcements_log.txt";
-    $timestamp = date("Y-m-d H:i:s");
-    $entry = "[$timestamp][$department][$priority] $message" . PHP_EOL;
+    $announcement = [
+        "department" => $department,
+        "priority" => $priority,
+        "message" => $message,
+        "timestamp" => $timestamp
+    ];
 
-    if (file_put_contents($logFile, $entry, FILE_APPEND | LOCK_EX)) {
-        echo "Announcement posted successfully.";
-    } else {
-        echo "Failed to write to the log.";
-    }
-} else {
-    echo "Invalid request method.";
+    $file = 'announcements.json';
+    $data = file_exists($file) ? json_decode(file_get_contents($file), true) : [];
+    $data[] = $announcement;
+
+    file_put_contents($file, json_encode($data));
+
+    echo "Announcement successfully posted!";
 }
 ?>
