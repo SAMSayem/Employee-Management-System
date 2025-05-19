@@ -4,14 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Employee Management System - Company Announcements</title>
-  <link rel="stylesheet" href="../CSS/Company Announcements.css">
+  <link rel="stylesheet" href="../asset/CSS/Company Announcements.css">
 </head>
 <body>
 <section id="announcements">
   <h2>Company Announcements</h2>
 
-  <!-- Post an Announcement -->
+
   <form id="announcementForm">
+  <!--<form id="announcementForm" action="Company Announcements.php">-->
+
     <label for="announcementDept">Department:</label>
     <select id="announcementDept" name="announcementDept" required>
       <option value="All">All</option>
@@ -33,11 +35,9 @@
     <button type="submit">Post Announcement</button>
   </form>
 
-  <!-- Priority Alerts Section -->
   <h3>🚨 Priority Alerts</h3>
   <ul id="priorityAlertsList" class="announcement-feed"></ul>
 
-  <!-- News Feed Section -->
   <h3>📰 News Feed</h3>
   <ul id="newsFeedList" class="announcement-feed"></ul>
 </section>
@@ -46,6 +46,6 @@
   <p>&copy; 2025 Employee Management System</p>
 </footer>
 
-<script src="../JS/Company Announcements.js"></script>
+<script src="../asset/JS/Company Announcements.js"></script>
 </body>
 </html>
