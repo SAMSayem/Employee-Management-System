@@ -13,7 +13,7 @@ const submitBtn = form.querySelector("button");
 function validateForm() {
   let valid = true;
 
-  // Name validation
+  // Name 
   if (nameInput.value.trim() === "") {
     setError(nameInput, "Name is required");
     valid = false;
@@ -21,7 +21,7 @@ function validateForm() {
     clearError(nameInput);
   }
 
-  // Email validation
+  // Email 
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value)) {
     setError(emailInput, "Enter a valid email");
     valid = false;
@@ -29,7 +29,7 @@ function validateForm() {
     clearError(emailInput);
   }
 
-  // Password validation
+  // Password
   if (passInput.value.length < 6) {
     setError(passInput, "Password must be at least 6 characters");
     valid = false;
@@ -60,7 +60,6 @@ function clearError(input) {
   input.classList.remove("invalid");
 }
 
-// Prevent submission if invalid
 form.addEventListener("submit", function (e) {
   validateForm();
   if (submitBtn.disabled) {

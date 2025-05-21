@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Leave Request System</title>
+  <link rel="stylesheet" href="../asset/CSS/LeaveCalendar.css">
+  <link rel="stylesheet" href="../asset/CSS/ApprovalWorkflow.css">
+  <link rel="stylesheet" href="../asset/CSS/BalanceTracker.css">
+  <style>
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    section, form {
+      flex: 1 1 300px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Leave Request Management</h1>
+  </header>
+
+  <main>
+    <!-- Leave Request Form -->
+    <section id="leaveRequestSection">
+      <h2>Submit Leave Request</h2>
+      <form id="leaveForm">
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate" required>
+
+        <label for="endDate">End Date:</label>
+        <input type="date" id="endDate" required>
+
+        <label for="leaveType">Leave Type:</label>
+        <select id="leaveType" required>
+          <option value="">Select Type</option>
+          <option value="Annual">Annual</option>
+          <option value="Sick">Sick</option>
+          <option value="Unpaid">Unpaid</option>
+        </select>
+
+        <button type="submit">Submit Request</button>
+      </form>
+    </section>
+
+    <!-- Upcoming Leaves -->
+    <section id="calendar">
+      <h2>Upcoming Leaves</h2>
+      <ul id="leaveList"></ul>
+    </section>
+
+    <!-- Approval Workflow -->
+    <section id="pendingRequests">
+      <h2>Pending Leave Requests</h2>
+      <ul id="requestList"></ul>
+    </section>
+
+    <!-- Leave Balance Tracker -->
+    <section id="balanceSection">
+      <h2>Leave Balances</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Leave Type</th>
+            <th>Used</th>
+            <th>Remaining</th>
+          </tr>
+        </thead>
+        <tbody id="balanceTable"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="../asset/JS/LeaveCalendar.js"></script>
+  <script src="../asset/JS/ApprovalWorkflow.js"></script>
+  <script src="../asset/JS/BalanceTracker.js"></script>
+</body>
+</html>

@@ -1,4 +1,3 @@
-// script.js – Reporting Lines
 const departments = [
     { name: 'Engineering', color: 'color-blue', reportsTo: ['CTO'] },
     { name: 'Sales', color: 'color-green', reportsTo: ['COO', 'CEO'] },

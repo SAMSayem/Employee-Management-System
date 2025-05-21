@@ -1,4 +1,3 @@
-// script.js – for Employee List page
 let employees = [];
 
 document.getElementById('addEmployeeForm')?.addEventListener('submit', function(e) {

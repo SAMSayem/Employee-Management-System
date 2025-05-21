@@ -1,6 +1,5 @@
 function showDetail(type) {
     alert(`Showing detailed view for: ${type}`);
-    // In real system: load detailed view with AJAX or redirect
   }
   
   function markAllRead() {

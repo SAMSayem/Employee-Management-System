@@ -1,4 +1,3 @@
-// script.js – Department Editor
 function allowDrop(ev) {
     ev.preventDefault();
   }

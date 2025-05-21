@@ -1,14 +1,10 @@
-// script.js
-
 function switchForm(formName) {
     document.querySelectorAll('.form').forEach(form => {
       form.classList.add('hidden');
     });
     document.getElementById(formName + 'Form').classList.remove('hidden');
   }
-  
-  // Optional: simple validation before submission
-  document.getElementById('signupForm')?.addEventListener('submit', function (e) {
+    document.getElementById('signupForm')?.addEventListener('submit', function (e) {
     const password = this.password.value;
     if (password.length < 6) {
       alert("Password must be at least 6 characters.");
