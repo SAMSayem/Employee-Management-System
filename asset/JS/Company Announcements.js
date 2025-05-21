@@ -1,4 +1,5 @@
 
+
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('announcementForm');
   const priorityList = document.getElementById('priorityAlertsList');

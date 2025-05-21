@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Employee Management Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f6f9;
+    }
+    header {
+      background-color: #1e90ff;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .dashboard {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: scale(1.03);
+    }
+    .card h3 {
+      margin-top: 0;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #ddd;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Employee Management System Dashboard</h1>
+</header>
+
+<main class="dashboard">
+  <div class="card" onclick="location.href='employee-directory.html'">
+    <h3>📇 Employee Directory</h3>
+    <p>Search staff, upload documents, assign IDs.</p>
+  </div>
+
+  <div class="card" onclick="location.href='department-structure.html'">
+    <h3>🏢 Department Structure</h3>
+    <p>View hierarchy, drag-and-drop teams.</p>
+  </div>
+
+  <div class="card" onclick="location.href='leave-requests.html'">
+    <h3>🌴 Leave Requests</h3>
+    <p>Submit time-off, approval flow, balance tracking.</p>
+  </div>
+
+  <div class="card" onclick="location.href='performance-reviews.html'">
+    <h3>📈 Performance Reviews</h3>
+    <p>Track reviews, feedback, goal progress.</p>
+  </div>
+
+  <div class="card" onclick="location.href='document-storage.html'">
+    <h3>🗂️ Document Storage</h3>
+    <p>Central HR files, e-signatures, version control.</p>
+  </div>
+
+  <div class="card" onclick="location.href='company-announcements.html'">
+    <h3>📢 Company Announcements</h3>
+    <p>Post updates, news feed, alerts.</p>
+  </div>
+
+  <div class="card" onclick="location.href='training-records.html'">
+    <h3>🎓 Training Records</h3>
+    <p>Courses, assessments, certifications.</p>
+  </div>
+
+  <div class="card" onclick="location.href='org-chart.html'">
+    <h3>🧩 Org Chart</h3>
+    <p>Interactive structure, profile cards.</p>
+  </div>
+
+  <div class="card" onclick="location.href='timesheets.html'">
+    <h3>🕒 Timesheets</h3>
+    <p>Log hours, project codes, overtime alerts.</p>
+  </div>
+
+  <div class="card" onclick="location.href='exit-interviews.html'">
+    <h3>🚪 Exit Interviews</h3>
+    <p>Offboarding, feedback, asset return.</p>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2025 Employee Management System</p>
+</footer>
+
+</body>
+</html>
