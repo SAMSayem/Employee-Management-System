@@ -1,4 +1,3 @@
-// review-template.js
 const reviewForm = document.getElementById('reviewForm');
 
 reviewForm.addEventListener('submit', function (e) {

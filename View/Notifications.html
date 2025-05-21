@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Notifications</title>
+  <link rel="stylesheet" href="../asset/CSS/Notifications.css" />
+</head>
+<body>
+  <div class="notifications-page">
+    <h2>Notifications</h2>
+
+    <!-- Summary Widgets -->
+    <div class="summary-widgets">
+      <div class="widget" onclick="showDetail('messages')">
+        <h3>Messages</h3>
+        <p id="count-messages">3 new</p>
+      </div>
+      <div class="widget" onclick="showDetail('alerts')">
+        <h3>System Alerts</h3>
+        <p id="count-alerts">1 alert</p>
+      </div>
+      <div class="widget" onclick="showDetail('tasks')">
+        <h3>Tasks</h3>
+        <p id="count-tasks">2 tasks</p>
+      </div>
+    </div>
+
+    <!-- Notification Center -->
+    <div class="section">
+      <h3>Notification Center</h3>
+      <ul id="notification-list">
+        <li>Leave request approved. <span class="timestamp">10 mins ago</span></li>
+        <li>New company policy uploaded. <span class="timestamp">1 hour ago</span></li>
+        <li>Performance review due soon. <span class="timestamp">Yesterday</span></li>
+      </ul>
+      <button onclick="markAllRead()">Mark All as Read</button>
+    </div>
+
+    <!-- Notification Settings -->
+    <div class="section">
+      <h3>Notification Settings</h3>
+      <form id="settings-form" action="../controller/php/save_settings.php" method="POST">
+        <label><input type="checkbox" name="email_notify" checked /> Email Notifications</label>
+        <label><input type="checkbox" name="sms_notify" /> SMS Notifications</label>
+        <label><input type="checkbox" name="push_notify" checked /> Push Notifications</label>
+        <button type="submit">Save Settings</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="../asset/JS/Notifications.js"></script>
+</body>
+</html>

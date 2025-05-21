@@ -1,4 +1,15 @@
 body {
+<<<<<<< HEAD
+  font-family: Arial, sans-serif;
+  margin: 0;
+  overflow: hidden;
+}
+
+#controls {
+  padding: 10px;
+  background: #1b4bcf;
+  text-align: right;
+=======
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 20px;
@@ -23,10 +34,25 @@ body {
 
 .print-btn:hover {
   background-color: #0056b3;
+>>>>>>> 9c62fb5e02892d0f9ae373287f050083da049e4e
 }
 
 #org-chart-container {
   display: flex;
+<<<<<<< HEAD
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+  overflow: auto;
+  transform-origin: 0 0;
+  transition: transform 0.3s;
+}
+
+.employee {
+  text-align: center;
+  cursor: pointer;
+  width: 120px;
+=======
   justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
@@ -45,12 +71,31 @@ body {
 
 .employee:hover {
   transform: scale(1.05);
+>>>>>>> 9c62fb5e02892d0f9ae373287f050083da049e4e
 }
 
 .employee img {
   width: 80px;
   height: 80px;
   border-radius: 50%;
+<<<<<<< HEAD
+}
+
+#profile-popup {
+  position: fixed;
+  top: 20%;
+  left: 30%;
+  width: 40%;
+  background: rgba(155, 173, 206, 0.233);
+  border: 2px solid #000;
+  padding: 20px;
+  display: none;
+  z-index: 10;
+}
+
+#profile-content {
+  margin-bottom: 10px;
+=======
   margin-bottom: 8px;
 }
 
@@ -88,4 +133,5 @@ body {
 #profile-content {
   font-size: 18px;
   margin-top: 20px;
+>>>>>>> 9c62fb5e02892d0f9ae373287f050083da049e4e
 }

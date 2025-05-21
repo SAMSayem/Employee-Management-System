@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Employee Directory</title>
+  <link rel="stylesheet" href="../asset/CSS/style.css"/>
+  <link rel="stylesheet" href="../asset/CSS/ProfileViewer.css"/>
+  <link rel="stylesheet" href="../asset/CSS/AdvSearch.css"/>
+</head>
+<body>
+  <header>
+    <h1>Employee Directory</h1>
+  </header>
+
+  <main>
+    <!-- Add Employee Section -->
+    <section id="employeeForm">
+      <h2>Add New Employee (HR)</h2>
+      <form id="addEmployeeForm" enctype="multipart/form-data" method="POST" action="../controller/php/add_employee.php">
+        <input type="text" name="empName" placeholder="Full Name" required />
+        <input type="text" name="empSkill" placeholder="Skill(s)" required />
+        <input type="file" name="empDocs" />
+        <input type="text" name="empID" placeholder="Assign ID" required />
+        <input type="text" name="empContact" placeholder="Contact" required />
+        <button type="submit">Add Employee</button>
+      </form>
+    </section>
+
+    <!-- Employee List Section -->
+    <section id="employeeList">
+      <h2>Employee Directory</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Skill</th>
+            <th>Contact</th>
+          </tr>
+        </thead>
+        <tbody id="directoryBody">
+          <?php include('../Backend/fetch_employees.php'); ?>
+        </tbody>
+      </table>
+      <button onclick="exportCSV()">Export as CSV</button>
+    </section>
+
+    <!-- Profile Viewer Section -->
+    <section id="profileViewer">
+      <h2>View Employee Profile</h2>
+      <form onsubmit="viewProfile(event)">
+        <input type="text" id="viewID" placeholder="Enter Employee ID" required />
+        <button type="submit">View Profile</button>
+      </form>
+      <div id="profileDisplay"></div>
+    </section>
+
+    <!-- Advanced Search Section -->
+    <section id="advancedSearch">
+      <h2>Advanced Employee Search</h2>
+      <input type="text" id="searchInput" placeholder="Search by name or skill..." oninput="advancedSearch()" />
+      <ul id="searchResults"></ul>
+    </section>
+  </main>
+
+  <script src="../asset/JS/script.js"></script>
+  <script src="../asset/JS/ProfileViewer.js"></script>
+  <script src="../asset/JS/AdvSearch.js"></script>
+</body>
+</html>

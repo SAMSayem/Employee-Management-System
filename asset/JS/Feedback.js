@@ -1,4 +1,3 @@
-// feedback.js
 const feedbackForm = document.getElementById('feedbackForm');
 
 feedbackForm.addEventListener('submit', function (e) {

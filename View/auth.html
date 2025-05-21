@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Authentication</title>
+  <link rel="stylesheet" href="../asset/CSS/auth.css">
+  <script defer src="../controller/php/auth.php"></script> <!-- If PHP outputs JS or needs to be fetched -->
+</head>
+<body>
+  <div class="auth-container">
+
+    <!-- Login Form -->
+    <form id="login-form" class="auth-form">
+      <h2>Login</h2>
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="password" name="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+      <p><a href="#" onclick="switchForm('forgot')">Forgot Password?</a></p>
+      <p>Don't have an account? <a href="#" onclick="switchForm('signup')">Signup</a></p>
+    </form>
+
+    <!-- Signup Form -->
+    <form id="signup-form" class="auth-form hidden">
+      <h2>Signup</h2>
+      <input type="text" name="name" placeholder="Full Name" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="password" name="password" placeholder="Password" required />
+      <button type="submit">Signup</button>
+      <p>Already have an account? <a href="#" onclick="switchForm('login')">Login</a></p>
+    </form>
+
+    <!-- Forgot Password Form -->
+    <form id="forgot-form" class="auth-form hidden">
+      <h2>Forgot Password</h2>
+      <input type="email" name="email" placeholder="Enter your email" required />
+      <button type="submit">Request Reset Link</button>
+      <p><a href="#" onclick="switchForm('login')">Back to Login</a></p>
+    </form>
+
+    <!-- Reset Password Form -->
+    <form id="reset-form" class="auth-form hidden">
+      <h2>Reset Password</h2>
+      <input type="password" name="new_password" placeholder="New Password" required />
+      <input type="password" name="confirm_password" placeholder="Confirm Password" required />
+      <button type="submit">Set New Password</button>
+    </form>
+
+    <!-- Email Verification -->
+    <div id="verify-email" class="auth-form hidden">
+      <h2>Email Verification</h2>
+      <p>A verification link has been sent to your email.</p>
+      <p>Please check your inbox and follow the instructions.</p>
+    </div>
+
+  </div>
+
+  <script>
+    function switchForm(form) {
+      const forms = document.querySelectorAll('.auth-form');
+      forms.forEach(f => f.classList.add('hidden'));
+      document.getElementById(`${form}-form`)?.classList.remove('hidden');
+      if (form === 'verify') {
+        document.getElementById('verify-email')?.classList.remove('hidden');
+      }
+    }
+  </script>
+</body>
+</html>

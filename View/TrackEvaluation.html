@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Track Evaluation</title>
+  <link rel="stylesheet" href="../asset/CSS/ReviewTemplate.css">
+  <link rel="stylesheet" href="../asset/CSS/Feedback.css">
+  <link rel="stylesheet" href="../asset/CSS/GoalTracking.css">
+  <style>
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+    section, form {
+      flex: 1 1 300px;
+      min-width: 300px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Employee Evaluation Tracking</h1>
+  </header>
+
+  <main>
+    <!-- Review Template (360° Feedback) -->
+    <section id="feedbackSection">
+      <h2>360° Feedback</h2>
+      <form id="feedbackForm">
+        <label for="reviewee">Employee Being Reviewed:</label>
+        <input type="text" id="reviewee" required>
+
+        <label for="reviewer">Your Name:</label>
+        <input type="text" id="reviewer" required>
+
+        <label for="feedback">Feedback:</label>
+        <textarea id="feedback" rows="5" required></textarea>
+
+        <label for="relationship">Your Role:</label>
+        <select id="relationship" required>
+          <option value="">Select</option>
+          <option value="Manager">Manager</option>
+          <option value="Peer">Peer</option>
+          <option value="Staff">Staff</option>
+        </select>
+
+        <button type="submit">Submit Feedback</button>
+      </form>
+    </section>
+
+    <!-- Goal Tracking -->
+    <section id="goalSection">
+      <h2>Employee Goal Tracker</h2>
+      <form id="goalForm">
+        <label for="employee">Employee:</label>
+        <input type="text" id="employee" required>
+
+        <label for="goal">Goal Description:</label>
+        <textarea id="goal" rows="4" required></textarea>
+
+        <label for="status">Progress Status:</label>
+        <select id="status" required>
+          <option value="">Select</option>
+          <option value="Not Started">Not Started</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Completed">Completed</option>
+        </select>
+
+        <button type="submit">Add Goal</button>
+      </form>
+      <section id="goalList"></section>
+    </section>
+  </main>
+
+  <script src="../asset/JS/Feedback.js"></script>
+  <script src="../asset/JS/GoalTracking.js"></script>
+</body>
+</html>

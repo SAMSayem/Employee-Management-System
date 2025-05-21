@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document Storage</title>
+
+  <!-- External CSS files -->
+  <link rel="stylesheet" href="../asset/CSS/DocumentVault.css" />
+  <link rel="stylesheet" href="../asset/CSS/VersionControl.css" />
+
+  <style>
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+    section {
+      flex: 1 1 400px;
+      min-width: 300px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6fa;
+      margin: 0;
+      padding: 20px;
+    }
+    header {
+      margin-bottom: 20px;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Document Storage System</h1>
+  </header>
+
+  <main>
+    <!-- Document Vault -->
+    <section id="vaultSection">
+      <h2>Document Vault</h2>
+
+      <label for="fileUpload">Upload Document:</label>
+      <input type="file" id="fileUpload" />
+
+      <label for="access">Access Permissions:</label>
+      <select id="access">
+        <option>HR</option>
+        <option>Manager</option>
+        <option>Employee</option>
+      </select>
+
+      <label for="email">Request Electronic Signature:</label>
+      <input type="email" id="email" placeholder="Enter email" />
+      <button onclick="sendSignature('Signature request sent!')">Send Signature Request</button>
+
+      <label for="retention">Retention Policy:</label>
+      <textarea id="retention" rows="3" placeholder="e.g., Retain for 3 years after upload date. Auto-delete after."></textarea>
+      <button onclick="saveRetention('Retention policy saved!')">Save Retention Policy</button>
+    </section>
+
+    <!-- Version Control -->
+    <section id="versionSection">
+      <h2>Document Version Control</h2>
+
+      <div class="version">
+        <p><strong>Contract_v2.pdf</strong></p>
+        <p>Edited by HR - Apr 7, 2025</p>
+        <button onclick="viewChanges('Viewing changes for v2')">View Changes</button>
+        <button onclick="restoreVersion('Restored to v2')">Restore Version</button>
+      </div>
+
+      <div class="version">
+        <p><strong>Contract_v1.pdf</strong></p>
+        <p>Original upload - Mar 21, 2025</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- External JS file -->
+  <script src="../asset/JS/DocumentVault.js"></script>
+</body>
+</html>

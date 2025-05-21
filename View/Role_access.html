@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Role-Based Access</title>
+  <link rel="stylesheet" href="../asset/CSS/Role_access.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Role-Based Access Management</h2>
+
+    <!-- Permission Settings -->
+    <div class="section">
+      <h3>Permission Settings</h3>
+      <form id="permission-form" action="../controller/php/save_permissions.php" method="POST">
+        <label for="role">Select Role:</label>
+        <select name="role" required>
+          <option value="">--Choose--</option>
+          <option value="Admin">Admin</option>
+          <option value="Manager">Manager</option>
+          <option value="Employee">Employee</option>
+        </select>
+
+        <div class="permissions">
+          <label><input type="checkbox" name="permissions[]" value="view"> View</label>
+          <label><input type="checkbox" name="permissions[]" value="edit"> Edit</label>
+          <label><input type="checkbox" name="permissions[]" value="delete"> Delete</label>
+          <label><input type="checkbox" name="permissions[]" value="export"> Export</label>
+        </div>
+
+        <button type="submit">Save Permissions</button>
+      </form>
+    </div>
+
+    <!-- Role Assignment -->
+    <div class="section">
+      <h3>Role Assignment</h3>
+      <form id="assign-role-form" action="../controller/php/assign_role.php" method="POST">
+        <input type="email" name="email" placeholder="Employee Email" required />
+        <label for="assign-role">Assign Role:</label>
+        <select name="assign_role" required>
+          <option value="">--Choose--</option>
+          <option value="Admin">Admin</option>
+          <option value="Manager">Manager</option>
+          <option value="Employee">Employee</option>
+        </select>
+        <button type="submit">Assign Role</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="../asset/JS/Role_access.js"></script>
+</body>
+</html>

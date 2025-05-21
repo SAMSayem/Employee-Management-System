@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile Management</title>
+  <link rel="stylesheet" href="../asset/CSS/Profile.css" />
+</head>
+<body>
+  <div class="profile-container">
+    <h2>Profile Management</h2>
+
+    <!-- View Profile -->
+    <div class="section" id="view-profile">
+      <h3>View Profile</h3>
+      <p><strong>Name:</strong> <span id="profile-name">Tanvir</span></p>
+      <p><strong>Email:</strong> <span id="profile-email">tanvirahesan@gmail.com</span></p>
+      <p><strong>Department:</strong> <span id="profile-dept">CSE</span></p>
+    </div>
+
+    <!-- Edit Profile -->
+    <div class="section">
+      <h3>Edit Profile</h3>
+      <form id="edit-profile-form" action="../controller/php/edit_profile.php" method="POST">
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="text" name="department" placeholder="Department" required />
+        <button type="submit">Save Changes</button>
+      </form>
+    </div>
+
+    <!-- Change Avatar -->
+    <div class="section">
+      <h3>Change Avatar</h3>
+      <form id="avatar-form" action="../controller/php/change_avatar.php" method="POST" enctype="multipart/form-data">
+        <input type="file" name="avatar" accept="image/*" required />
+        <button type="submit">Upload Avatar</button>
+      </form>
+    </div>
+
+    <!-- Update Password -->
+    <div class="section">
+      <h3>Update Password</h3>
+      <form id="password-form" action="../controller/php/update_password.php" method="POST">
+        <input type="password" name="current_password" placeholder="Current Password" required />
+        <input type="password" name="new_password" placeholder="New Password" required />
+        <input type="password" name="confirm_password" placeholder="Confirm New Password" required />
+        <button type="submit">Update Password</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="../asset/JS/Profile.js"></script>
+</body>
+</html>

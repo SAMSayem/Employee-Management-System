@@ -1,6 +1,3 @@
-// script.js – Advanced Search Page
-// Assumes "employees" is globally available or loaded dynamically
-
 function advancedSearch() {
     const query = document.getElementById('searchInput').value.toLowerCase().trim();
     const results = document.getElementById('searchResults');

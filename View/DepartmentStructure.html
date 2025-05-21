@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Department Structure</title>
+  <link rel="stylesheet" href="../asset/CSS/DepartmentEditor.css">
+  <link rel="stylesheet" href="../asset/CSS/ReportingLines.css">
+  <style>
+    section {
+      margin-bottom: 40px;
+    }
+    .dept-container {
+      border: 1px solid #aaa;
+      min-height: 100px;
+      margin: 10px 0;
+      padding: 10px;
+      background-color: #f9f9f9;
+    }
+    #departments {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    .department {
+      padding: 10px;
+      background: #ddd;
+      border-radius: 5px;
+      cursor: grab;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Department Structure</h1>
+  </header>
+
+  <main>
+    <!-- Department Editor Section -->
+    <section id="editor">
+      <h2>Department Editor</h2>
+      <div class="dept-container" id="deptA" ondrop="drop(event, 'deptA')" ondragover="allowDrop(event)">
+        <h3>Division A</h3>
+      </div>
+      <div class="dept-container" id="deptB" ondrop="drop(event, 'deptB')" ondragover="allowDrop(event)">
+        <h3>Division B</h3>
+      </div>
+      <div class="dept-container" id="deptC" ondrop="drop(event, 'deptC')" ondragover="allowDrop(event)">
+        <h3>Division C</h3>
+      </div>
+
+      <div id="departments">
+        <div id="eng" class="department blue" draggable="true" ondragstart="drag(event)">Engineering</div>
+        <div id="sales" class="department green" draggable="true" ondragstart="drag(event)">Sales</div>
+        <div id="HR" class="department red" draggable="true" ondragstart="drag(event)">HR</div>
+        <div id="Marketing" class="department orange" draggable="true" ondragstart="drag(event)">Marketing</div>
+      </div>
+    </section>
+
+    <!-- Reporting Lines Section -->
+    <section id="reporting">
+      <h2>Reporting Lines</h2>
+      <div id="reportingContainer">
+        <ul class="tree">
+          <li>
+            <span class="manager">CEO</span>
+            <ul>
+              <li>
+                <span class="manager">Head of Engineering</span>
+                <ul>
+                  <li><span class="employee">Backend Lead</span></li>
+                  <li><span class="employee">Frontend Lead</span></li>
+                </ul>
+              </li>
+              <li>
+                <span class="manager">Head of Sales</span>
+                <ul>
+                  <li><span class="employee">Sales Executive A</span></li>
+                  <li><span class="employee">Sales Executive B</span></li>
+                </ul>
+              </li>
+              <li>
+                <span class="manager">HR Manager</span>
+                <ul>
+                  <li><span class="employee">Recruiter</span></li>
+                  <li><span class="employee">Payroll Officer</span></li>
+                </ul>
+              </li>
+              <li>
+                <span class="manager">Marketing Director</span>
+                <ul>
+                  <li><span class="employee">Content Creator</span></li>
+                  <li><span class="employee">Social Media Manager</span></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="../asset/JS/DepartmentEditor.js"></script>
+  <script src="../asset/JS/ReportingLines.js"></script>
+</body>
+</html>

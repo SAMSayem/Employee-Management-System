@@ -1,4 +1,3 @@
-// goal-tracking.js
 const goalForm = document.getElementById('goalForm');
 const goalList = document.getElementById('goalList');
 
