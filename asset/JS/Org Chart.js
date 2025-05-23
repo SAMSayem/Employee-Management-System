@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 let scale = 1;
 const container = document.getElementById("org-chart-container");
 
@@ -16,7 +16,6 @@ function showProfile(name) {
   popup.style.display = "block";
 }
 
-=======
 // Define full profiles for each employee
 var profiles = {
   "Tanvir": {
@@ -24,14 +23,14 @@ var profiles = {
     bio: "Tanvir is the visionary leader of the organization, responsible for strategic decisions, overall management, and company growth.",
     email: "tanvir@company.com",
     phone: "+01239-65454",
-    image: "../Image/Tanvir.jpg"
+    image: "../asset/Image/Tanvir.jpg"
   },
   "SAM": {
     title: "Chief Technology Officer (CTO)",
     bio: "SAM leads the technology division, driving innovation and overseeing all product and infrastructure development.",
     email: "sam@company.com",
     phone: "+01325-554421",
-    image: "../Image/SAM.png"
+    image: "../asset/Image/SAM.png"
   }
 };
 
@@ -54,15 +53,7 @@ function showProfile(name, roleKey) {
 }
 
 // Close the modal
->>>>>>> 9c62fb5e02892d0f9ae373287f050083da049e4e
+
 function closeProfile() {
   document.getElementById("profile-popup").style.display = "none";
-}
-
-<<<<<<< HEAD
-=======
-// Print the chart
->>>>>>> 9c62fb5e02892d0f9ae373287f050083da049e4e
-function printChart() {
-  window.print();
 }

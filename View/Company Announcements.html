@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,8 +10,7 @@
 <section id="announcements">
   <h2>Company Announcements</h2>
 
-
-  <form id="announcementForm">
+  <form id="announcementForm" action="controller/php/CompanyAnnouncements.php" method="POST">
 
     <label for="announcementDept">Department:</label>
     <select id="announcementDept" name="announcementDept" required>
@@ -44,7 +42,7 @@
 
 <footer>
   <p>&copy; 2025 Employee Management System</p>
-</footer>
+  <p><a href="controller/php/logout.php">Logout</a></p> </footer>
 
 <script src="../asset/JS/Company Announcements.js"></script>
 </body>

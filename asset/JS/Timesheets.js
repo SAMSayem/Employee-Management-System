@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 let startTime = null;
 let totalHours = 0;
 
@@ -41,7 +40,6 @@ function clockOut() {
     document.getElementById('alert').textContent = "⚠️ Overtime Alert: Over 8 hours worked!";
   } else {
     document.getElementById('alert').textContent = "";
-=======
 
 var timeLog = {};
 
@@ -105,6 +103,7 @@ function updateLog() {
 
     line += "</p>";
     logDiv.innerHTML += line;
->>>>>>> 9c62fb5e02892d0f9ae373287f050083da049e4e
+  }
+}
   }
 }
